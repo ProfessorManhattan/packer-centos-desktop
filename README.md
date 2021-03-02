@@ -1,4 +1,4 @@
-# Base Fedora Desktop
+# Base CentOS Desktop
 
 This repository contains the files necessary for building minimal **CentOS desktop** VM images for the following virtualization platforms:
 
