@@ -1,1 +1,1 @@
-../modules/bento/packer_templates/_common/vmware.sh
+../.modules/bento/packer_templates/_common/vmware.sh

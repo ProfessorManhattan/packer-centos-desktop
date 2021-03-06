@@ -1,1 +1,1 @@
-../modules/bento/packer_templates/centos/scripts/cleanup.sh
+../.modules/bento/packer_templates/centos/scripts/cleanup.sh

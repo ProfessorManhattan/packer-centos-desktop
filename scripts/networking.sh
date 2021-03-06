@@ -1,1 +1,1 @@
-../modules/bento/packer_templates/centos/scripts/networking.sh
+../.modules/bento/packer_templates/centos/scripts/networking.sh

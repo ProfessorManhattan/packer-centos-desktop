@@ -1,1 +1,1 @@
-../modules/bento/packer_templates/centos/scripts/update.sh
+../.modules/bento/packer_templates/centos/scripts/update.sh
