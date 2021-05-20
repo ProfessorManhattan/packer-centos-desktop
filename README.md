@@ -64,7 +64,7 @@
   </p>
 </div>
 
-> </br><h3 align="center">**An automated CentOS Desktop (version 8.3) Packer project that builds boxes using the latest CentOS release**</h3></br>
+> </br><h3 align="center">**An automated CentOS Desktop (currently, version 8.3) Packer project that builds boxes using the latest CentOS release**</h3></br>
 
 <!--TERMINALIZER![terminalizer_title](https://gitlab.com/megabyte-labs/ansible-roles/role_name/-/raw/master/.demo.gif)TERMINALIZER-->
 
