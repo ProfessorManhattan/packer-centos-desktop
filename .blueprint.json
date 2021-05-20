@@ -1,0 +1,8 @@
+{
+  "badge_style": "flat",
+  "description_template": "CentOS Desktop MAJOR_VERSION",
+  "description_template_package": "A CentOS Desktop MAJOR_VERSION Packer project based on chef bento's CentOS Server settings (with the addition of the desktop GUI)",
+  "hostname": "vagrant-centos",
+  "slug": "centos-desktop",
+  "vagrant_tag": "centos"
+}
