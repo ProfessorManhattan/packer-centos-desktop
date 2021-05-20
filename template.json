@@ -6,7 +6,7 @@
     "build_directory": "build",
     "compression_level": "9",
     "cpus": "2",
-    "description": "CentOS Desktop 8",
+    "description": "CentOS Desktop 8.3",
     "disk_size": "80000",
     "guest_additions_url": "",
     "headless": "false",

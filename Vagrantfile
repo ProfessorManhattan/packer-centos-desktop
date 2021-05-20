@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :centos do |centos|
     centos.vm.box="Megabyte/CentOS-Desktop"
     centos.vm.hostname = "vagrant-centos"
-    centos.vm.name = "CentOS Desktop 8"
+    centos.vm.name = "CentOS Desktop 8.3"
     centos.vm.network :forwarded_port, guest: 22, host: 58022, id: "ssh", auto_correct: true
     centos.vm.network :forwarded_port, guest: 443, host: 58443, id: "https", auto_correct: true
     centos.vm.network :forwarded_port, guest: 80, host: 58080, id: "http", auto_correct: true

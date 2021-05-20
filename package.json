@@ -1,6 +1,6 @@
 {
   "name": "@megabytelabs/packer-centos-desktop",
-  "description": "A CentOS Desktop 8 Packer project based on chef bento's CentOS Server settings (with the addition of the desktop GUI)",
+  "description": "An automated CentOS Desktop (version 8.3) Packer project that builds boxes using the latest CentOS release",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
   "version": "1.0.0",
