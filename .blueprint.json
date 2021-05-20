@@ -1,7 +1,7 @@
 {
   "badge_style": "flat",
   "description_template": "CentOS Desktop MAJOR_VERSION.MINOR_VERSION",
-  "description_template_package": "An automated CentOS Desktop (version MAJOR_VERSION.MINOR_VERSION) Packer project that builds boxes using the latest CentOS release",
+  "description_template_package": "An automated CentOS Desktop (currently, version MAJOR_VERSION.MINOR_VERSION) Packer project that builds boxes using the latest CentOS release",
   "hostname": "vagrant-centos",
   "slug": "centos-desktop",
   "vagrant_tag": "centos",
