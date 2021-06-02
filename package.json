@@ -1,5 +1,6 @@
 {
   "name": "@megabytelabs/packer-centos-desktop",
+  "version": "null",
   "description": "An automated CentOS Desktop (currently, version 8.3) Packer project that builds boxes using the latest CentOS Stream release",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",

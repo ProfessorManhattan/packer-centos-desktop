@@ -35,7 +35,7 @@
   </h4>
   <p align="center">
     <a href="https://gitlab.com/megabyte-labs/npm/centos-desktop" target="_blank">
-      <img alt="Version: 1.0.0" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+      <img alt="Version: null" src="https://img.shields.io/badge/version-null-blue.svg?cacheSeconds=2592000" />
     </a>
     <a href="https://gitlab.com/megabyte-labs/packer/centos-desktop/commits/master" target="_blank">
       <img alt="Pipeline status" src="https://gitlab.com/megabyte-labs/packer/centos-desktop/badges/master/pipeline.svg">
@@ -64,11 +64,7 @@
   </p>
 </div>
 
-<<<<<<< HEAD
 > </br><h3 align="center">**An automated CentOS Desktop (currently, version 8.3) Packer project that builds boxes using the latest CentOS Stream release**</h3></br>
-=======
-> </br><h3 align="center">**An automated CentOS Desktop (currently, version 8.3) Packer project that builds boxes using the latest CentOS release**</h3></br>
->>>>>>> 54c4e4dfdd9c301e53d595bce84ad73ecdcc3586
 
 <!--TERMINALIZER![terminalizer_title](https://gitlab.com/megabyte-labs/ansible-roles/role_name/-/raw/master/.demo.gif)TERMINALIZER-->
 
