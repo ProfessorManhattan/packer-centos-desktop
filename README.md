@@ -64,7 +64,11 @@
   </p>
 </div>
 
+<<<<<<< HEAD
 > </br><h3 align="center">**An automated CentOS Desktop (currently, version 8.3) Packer project that builds boxes using the latest CentOS Stream release**</h3></br>
+=======
+> </br><h3 align="center">**An automated CentOS Desktop (currently, version 8.3) Packer project that builds boxes using the latest CentOS release**</h3></br>
+>>>>>>> 54c4e4dfdd9c301e53d595bce84ad73ecdcc3586
 
 <!--TERMINALIZER![terminalizer_title](https://gitlab.com/megabyte-labs/ansible-roles/role_name/-/raw/master/.demo.gif)TERMINALIZER-->
 

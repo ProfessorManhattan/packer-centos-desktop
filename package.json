@@ -3,7 +3,6 @@
   "description": "An automated CentOS Desktop (currently, version 8.3) Packer project that builds boxes using the latest CentOS Stream release",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
-  "version": "1.0.0",
   "scripts": {
     "build": "trash build && packer build template.json",
     "build:hyperv": "trash build && packer build -only=hyperv-iso template.json",
