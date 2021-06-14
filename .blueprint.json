@@ -1,9 +1,9 @@
 {
   "badge_style": "flat",
-  "description_template": "CentOS Desktop MAJOR_VERSION.MINOR_VERSION",
-  "description_template_package": "An automated CentOS Desktop (currently, version MAJOR_VERSION.MINOR_VERSION) Packer project that builds boxes using the latest CentOS Stream release",
+  "description_template": "CentOS Stream Desktop ISO_VERSION",
+  "description_template_package": "An automated CentOS Stream Desktop (currently, version ISO_VERSION) Packer project that builds boxes using the latest CentOS Stream release",
   "hostname": "vagrant-centos",
   "slug": "centos-desktop",
   "vagrant_tag": "centos",
-  "version_description": "Compact CentOS Desktop ISO_VERSION image. Built from the CentOS Stream Server image using many of the scripts that bento chef uses. See https://gitlab.com/megabyte-labs/packer/centos-desktop for more details."
+  "version_description": "Compact CentOS Stream Desktop ISO_VERSION image. Built from the CentOS Stream Server image using many of the scripts that bento chef uses. See https://gitlab.com/megabyte-labs/packer/centos-desktop for more details."
 }

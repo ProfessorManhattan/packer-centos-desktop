@@ -16,12 +16,11 @@ Vagrant.configure("2") do |config|
     centos.vm.network :forwarded_port, guest: 3389, host: 53389, id: "rdp", auto_correct: true
     centos.vm.network :forwarded_port, guest: 443, host: 58443, id: "https", auto_correct: true
     centos.vm.network :forwarded_port, guest: 80, host: 58080, id: "http", auto_correct: true
-    centos.vm.network :private_network, ip: "172.24.24.2", netmask: "255.255.255.0"
 
     centos.vm.provider :hyperv do |v|
       v.cpus = 2
       v.maxmemory = 4096
-      v.vmname = "CentOS Desktop 8.3"
+      v.vmname = "CentOS Desktop 8.8"
     end
 
     centos.vm.provider :libvirt do |v, override|
@@ -47,7 +46,7 @@ Vagrant.configure("2") do |config|
     centos.vm.provider :parallels do |v|
       v.cpus = 2
       v.memory = 4096
-      v.name = "CentOS Desktop 8.3"
+      v.name = "CentOS Desktop 8.8"
       v.update_guest_tools = true
     end
 
@@ -65,7 +64,7 @@ Vagrant.configure("2") do |config|
       v.customize ["setextradata", "global", "GUI/SuppressMessages", "all"]
       v.gui = true
       v.memory = 4096
-      v.name = "CentOS Desktop 8.3"
+      v.name = "CentOS Desktop 8.8"
     end
 
     centos.vm.provider :vmware_fusion do |v|
