@@ -6,7 +6,11 @@
     "build_directory": "build",
     "compression_level": "9",
     "cpus": "2",
+<<<<<<< HEAD
     "description": "CentOS Stream Desktop 8",
+=======
+    "description": "CentOS Desktop 8.3",
+>>>>>>> 06cc95bd967bb06430564ef585d0c474701f0b86
     "disk_size": "80000",
     "guest_additions_url": "",
     "headless": "false",
@@ -15,9 +19,15 @@
     "https_proxy": "{{ env `HTTPS_PROXY` }}",
     "hyperv_generation": "1",
     "hyperv_switch": "bento",
+<<<<<<< HEAD
     "iso_checksum_url": "https://mirror.arizona.edu/centos/8-stream/isos/x86_64/CHECKSUM",
     "iso_url": "https://mirror.arizona.edu/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20210528-dvd1.iso",
     "iso_version": "8",
+=======
+    "iso_checksum_url": "https://mirror.arizona.edu/centos/8/isos/x86_64/CHECKSUM",
+    "iso_url": "https://mirror.arizona.edu/centos/8/isos/x86_64/CentOS-8.3.2011-x86_64-dvd1.iso",
+    "iso_version": "8.3.2011",
+>>>>>>> 06cc95bd967bb06430564ef585d0c474701f0b86
     "kickstarter_path": "kickstarter.cfg",
     "latestos_tag": "centos",
     "memory": "2048",
@@ -29,7 +39,11 @@
     "ssh_username": "vagrant",
     "vagrantup_token": "{{ env `VAGRANT_CLOUD_TOKEN` }}",
     "vagrantup_user": "Megabyte",
+<<<<<<< HEAD
     "version_description": "Compact CentOS Desktop 8 image. Built from the CentOS Stream Server image using many of the scripts that bento chef uses. See https://gitlab.com/megabyte-labs/packer/centos-desktop for more details.",
+=======
+    "version_description": "Compact CentOS Desktop 8.3.2011 image. Built from the CentOS Stream Server image using many of the scripts that bento chef uses. See https://gitlab.com/megabyte-labs/packer/centos-desktop for more details.",
+>>>>>>> 06cc95bd967bb06430564ef585d0c474701f0b86
     "vm_name": "{{ user `box_basename` }}-{{ user `iso_version` }}"
   },
   "builders": [
@@ -174,6 +188,7 @@
       "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -S -E sh -eux '{{ .Path }}'",
       "expect_disconnect": true,
       "scripts": [
+<<<<<<< HEAD
         "scripts/update.symlink.sh",
         "scripts/sshd.symlink.sh",
         "scripts/networking.symlink.sh",
@@ -183,6 +198,17 @@
         "scripts/parallels.symlink.sh",
         "scripts/cleanup.symlink.sh",
         "scripts/minimize.symlink.sh",
+=======
+        "scripts/update.sh",
+        "scripts/sshd.sh",
+        "scripts/networking.sh",
+        "scripts/vagrant.sh",
+        "scripts/virtualbox.sh",
+        "scripts/vmware.sh",
+        "scripts/parallels.sh",
+        "scripts/cleanup.sh",
+        "scripts/minimize.sh",
+>>>>>>> 06cc95bd967bb06430564ef585d0c474701f0b86
         "scripts/desktop.custom.sh"
       ]
     }

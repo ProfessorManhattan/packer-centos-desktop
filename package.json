@@ -4,6 +4,15 @@
   "description": "An automated CentOS Desktop (currently, version 8.8) Packer project that builds boxes using the latest CentOS Stream release",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
+  "homepage": "https://megabyte.space",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/megabyte-labs/packer/centos-desktop.git"
+  },
+  "bugs": {
+    "email": "help@megabyte.space",
+    "url": "https://gitlab.com/megabyte-labs/packer/centos-desktop/-/issues"
+  },
   "scripts": {
     "build": "trash build && packer build template.json",
     "build:hyperv": "trash build && packer build -only=hyperv-iso template.json",
@@ -23,6 +32,7 @@
     "test:packer": "packer validate template.json",
     "test:prettier": "prettier \"{scripts/*.custom.sh,*.json}\" --list-different",
     "test:shellcheck": "shellcheck scripts/*.custom.sh",
+    "test:vagrant": "vagrant validate",
     "update": "bash .start.sh && cp ./.modules/packer/.start.sh .start.sh",
     "version": "standard-version --no-verify"
   },
@@ -46,6 +56,18 @@
     "shellcheck": "^1.0.0",
     "standard-version": "^9.3.0",
     "trash-cli": "^4.0.0"
+  },
+  "keywords": [
+    "accelerated",
+    "centos-desktop",
+    "compressed",
+    "desktop",
+    "optimized",
+    "packer",
+    "workstation"
+  ],
+  "engines": {
+    "node": ">=10"
   },
   "funding": [
     {
@@ -84,5 +106,10 @@
     "test": "Validates the Packer configuration file (i.e. template.json) and performs some other linting",
     "update": "Runs .start.sh to automatically update meta files and documentation",
     "version": "Used by 'npm run prepare-release' to update the CHANGELOG and app version"
+  },
+  "standard-version": {
+    "scripts": {
+      "prerelease": "git add --all"
+    }
   }
 }
