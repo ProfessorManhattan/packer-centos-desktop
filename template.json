@@ -29,8 +29,7 @@
     "ssh_username": "vagrant",
     "vagrantup_token": "{{ env `VAGRANT_CLOUD_TOKEN` }}",
     "vagrantup_user": "Megabyte",
-    "version_description": "Compact CentOS Stream Desktop 8 image. Built from the CentOS Stream Server image using many of the scripts that bento chef uses. See https://gitlab.com/megabyte-labs/packer/centos-desktop for more details.",
-    "vm_name": "{{ user `box_basename` }}-{{ user `iso_version` }}"
+    "version_description": "Compact CentOS Stream Desktop 8 image. Built from the CentOS Stream Server image using many of the scripts that bento chef uses. See https://gitlab.com/megabyte-labs/packer/centos-desktop for more details."
   },
   "builders": [
     {
@@ -53,7 +52,7 @@
       "ssh_timeout": "{{ user `ssh_timeout` }}",
       "ssh_username": "{{ user `ssh_username` }}",
       "switch_name": "{{ user `hyperv_switch` }}",
-      "vm_name": "{{ user `vm_name` }}"
+      "vm_name": "{{ user `box_basename` }}-{{ user `iso_version` }}"
     },
     {
       "type": "parallels-iso",
@@ -74,7 +73,7 @@
       "ssh_port": "{{ user `ssh_port` }}",
       "ssh_timeout": "{{ user `ssh_timeout` }}",
       "ssh_username": "{{ user `ssh_username` }}",
-      "vm_name": "{{ user `vm_name` }}"
+      "vm_name": "{{ user `box_basename` }}-{{ user `iso_version` }}"
     },
     {
       "type": "qemu",
@@ -93,7 +92,7 @@
       "ssh_port": "{{ user `ssh_port` }}",
       "ssh_timeout": "{{ user `ssh_timeout` }}",
       "ssh_username": "{{ user `ssh_username` }}",
-      "vm_name": "{{ user `vm_name` }}"
+      "vm_name": "{{ user `box_basename` }}-{{ user `iso_version` }}"
     },
     {
       "type": "virtualbox-iso",
@@ -117,7 +116,7 @@
       "ssh_timeout": "{{ user `ssh_timeout` }}",
       "ssh_username": "{{ user `ssh_username` }}",
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "{{ user `vm_name` }}"
+      "vm_name": "{{ user `box_basename` }}-{{ user `iso_version` }}"
     },
     {
       "type": "vmware-iso",
@@ -138,7 +137,7 @@
       "ssh_timeout": "{{ user `ssh_timeout` }}",
       "ssh_username": "{{ user `ssh_username` }}",
       "tools_upload_flavor": "linux",
-      "vm_name": "{{ user `vm_name` }}",
+      "vm_name": "{{ user `box_basename` }}-{{ user `iso_version` }}",
       "vmx_data": {
         "cpuid.coresPerSocket": "1"
       },
