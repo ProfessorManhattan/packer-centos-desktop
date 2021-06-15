@@ -5,9 +5,7 @@
       "boot_wait": "{{ user `boot_wait` }}",
       "cpus": "{{ user `cpus` }}",
       "disk_size": "{{ user `disk_size` }}",
-      "floppy_files": [
-        "{{ user `http_directory` }}/{{ user `kickstarter_path` }}"
-      ],
+      "floppy_files": ["{{ user `http_directory` }}/{{ user `kickstarter_path` }}"],
       "generation": "{{ user `hyperv_generation` }}",
       "guest_additions_mode": "disable",
       "http_directory": "{{ user `http_directory` }}",
@@ -189,4 +187,3 @@
     "version_description": "Compact CentOS Stream Desktop 8 image. Built from the CentOS Stream Server image using many of the scripts that bento chef uses. See https://gitlab.com/megabyte-labs/packer/centos-desktop for more details."
   }
 }
-
