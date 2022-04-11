@@ -184,6 +184,6 @@
     "ssh_username": "vagrant",
     "vagrantup_token": "{{ env `VAGRANT_CLOUD_TOKEN` }}",
     "vagrantup_user": "Megabyte",
-    "version_description": "Compact CentOS Stream Desktop 8 image. Built from the CentOS Stream Server image using many of the scripts that bento chef uses. See https://gitlab.com/megabyte-labs/packer/centos-desktop for more details."
+    "version_description": "Compact CentOS Stream Desktop 8 image. Built from the CentOS Stream Server image using many of the scripts that Bento Chef uses. See https://github.com/megabyte-labs/packer-centos-desktop for more details."
   }
 }

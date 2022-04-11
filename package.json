@@ -1,41 +1,41 @@
 {
+  "private": false,
+  "name": "@mblabs/centos-desktop",
+  "version": "1.0.0",
+  "description": "An automated CentOS Stream Desktop Packer project (currently, version 8) that builds boxes using the latest CentOS Stream release",
+  "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
-  "blueprint": {
-    "description": "An automated CentOS Stream Desktop Packer project (currently, version ISO_VERSION) that builds boxes using the latest CentOS Stream release",
-    "description_template": "CentOS Stream Desktop ISO_VERSION",
-    "group": "packer",
-    "hostname": "vagrant-centos",
-    "name": "CentOS Stream Desktop",
-    "overview": "This project houses configurations that can be used to build performant **[CentOS](https://www.centos.org/) Stream Desktop** images. It uses a CentOS Stream image as a base, uses Packer to automate the build process, and then sets the image up using some [Bento scripts](https://github.com/chef/bento/tree/main/packer_templates/centos/scripts) which take care of optimizing the image for your system (i.e. setting up SSH with the Vagrant default public key, setting up GuestAdditions for VirtualBox, etc.). This project is intended to be used to create desktop images that you would launch from your main desktop using a GUI. If you are looking for headless images, you should either use [Bento's server images](https://app.vagrantup.com/bento). You might also have some luck browsing through our [Packer projects](https://gitlab.com/megabyte-labs/packer).",
-    "repository": {
-      "github": "https://github.com/megabyte-labs/packer-centos-desktop",
-      "gitlab": "https://gitlab.com/megabyte-labs/packer/centos-desktop"
-    },
-    "slug": "centos-desktop",
-    "subgroup": "desktop",
-    "title": "CentOS Stream Desktop Template for Packer",
-    "vagrant_tag": "centos",
-    "version_description": "Compact CentOS Stream Desktop ISO_VERSION image. Built from the CentOS Stream Server image using many of the scripts that Bento Chef uses. See https://github.com/megabyte-labs/packer-centos-desktop for more details."
+  "homepage": "https://megabyte.space",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megabyte-labs/packer-centos-desktop.git"
   },
   "bugs": {
     "email": "help@megabyte.space",
     "url": "https://gitlab.com/megabyte-labs/packer/centos-desktop/-/issues"
   },
-  "changelog": {
-    "displayTypes": [
-      "feat",
-      "fix",
-      "perf",
-      "refactor",
-      "revert"
-    ],
-    "showAuthor": true
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "helpUrl": "https://megabyte.space/docs/contributing/commits"
+  "type": "module",
+  "scripts": {
+    "build": "task packer:build",
+    "build:hyperv": "task packer:build:hyperv",
+    "build:kvm": "task packer:build:kvm",
+    "build:parallels": "task packer:build:parallels",
+    "build:virtualbox": "task packer:build:virtualbox",
+    "build:vmware": "task packer:build:vmware",
+    "commit": "bash start.sh && task commit",
+    "fix": "bash start.sh && task fix",
+    "help": "bash start.sh && task --menu",
+    "lint": "bash start.sh && task lint",
+    "preload": "bash start.sh && task preload",
+    "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
+    "release": "bash start.sh && task publish:semantic-release",
+    "repair": "bash <(curl -sS https://install.doctor/repair)",
+    "start": "test -z $SKIP_NPM_START && bash start.sh || true",
+    "test": "task lint:packer",
+    "unpack": "bash start.sh && task npm:bundle:unpack",
+    "update": "bash start.sh && task update",
+    "vagrant": "task vagrant:up",
+    "vscode": "bash start.sh && task vscode"
   },
   "config": {
     "commitizen": {
@@ -43,7 +43,7 @@
     }
   },
   "dependencies": {},
-  "description": "An automated CentOS Stream Desktop Packer project (currently, version 8) that builds boxes using the latest CentOS Stream release",
+  "optionalDependencies": {},
   "devDependencies": {
     "@commitlint/config-conventional": "latest",
     "@megabytelabs/prettier-config": "^1.2.893",
@@ -67,30 +67,6 @@
     "trash-cli": "^4.0.0",
     "typescript": "^4.5.5"
   },
-  "engines": {
-    "node": ">=14.18.0"
-  },
-  "eslintConfig": {
-    "extends": "eslint-config-strict-mode",
-    "rules": {
-      "json-schema-validator/no-invalid": "off"
-    }
-  },
-  "funding": [
-    {
-      "type": "opencollective",
-      "url": "https://opencollective.com/megabytelabs"
-    },
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/ProfessorManhattan"
-    }
-  ],
-  "homepage": "https://megabyte.space",
-  "jscpd": {
-    "gitignore": true,
-    "threshold": 0.1
-  },
   "keywords": [
     "accelerated",
     "centos-desktop",
@@ -109,7 +85,68 @@
     "washingtondc",
     "workstation"
   ],
-  "license": "MIT",
+  "engines": {
+    "node": ">=14.18.0"
+  },
+  "publishConfig": {
+    "@gitlab:registry": "https://gitlab.com/api/v4/projects//packages/npm/",
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "edge"
+  },
+  "blueprint": {
+    "description": "An automated CentOS Stream Desktop Packer project (currently, version ISO_VERSION) that builds boxes using the latest CentOS Stream release",
+    "description_template": "CentOS Stream Desktop ISO_VERSION",
+    "group": "packer",
+    "hostname": "vagrant-centos",
+    "name": "CentOS Stream Desktop",
+    "overview": "This project houses configurations that can be used to build performant **[CentOS](https://www.centos.org/) Stream Desktop** images. It uses a CentOS Stream image as a base, uses Packer to automate the build process, and then sets the image up using some [Bento scripts](https://github.com/chef/bento/tree/main/packer_templates/centos/scripts) which take care of optimizing the image for your system (i.e. setting up SSH with the Vagrant default public key, setting up GuestAdditions for VirtualBox, etc.). This project is intended to be used to create desktop images that you would launch from your main desktop using a GUI. If you are looking for headless images, you should either use [Bento's server images](https://app.vagrantup.com/bento). You might also have some luck browsing through our [Packer projects](https://gitlab.com/megabyte-labs/packer).",
+    "repository": {
+      "github": "https://github.com/megabyte-labs/packer-centos-desktop",
+      "gitlab": "https://gitlab.com/megabyte-labs/packer/centos-desktop"
+    },
+    "slug": "centos-desktop",
+    "subgroup": "desktop",
+    "title": "CentOS Stream Desktop Template for Packer",
+    "vagrant_tag": "centos",
+    "version_description": "Compact CentOS Stream Desktop ISO_VERSION image. Built from the CentOS Stream Server image using many of the scripts that Bento Chef uses. See https://github.com/megabyte-labs/packer-centos-desktop for more details."
+  },
+  "changelog": {
+    "displayTypes": [
+      "feat",
+      "fix",
+      "perf",
+      "refactor",
+      "revert"
+    ],
+    "showAuthor": true
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "helpUrl": "https://megabyte.space/docs/contributing/commits"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-strict-mode",
+    "rules": {
+      "json-schema-validator/no-invalid": "off"
+    }
+  },
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/megabytelabs"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/ProfessorManhattan"
+    }
+  ],
+  "jscpd": {
+    "gitignore": true,
+    "threshold": 0.1
+  },
   "lint-staged": {
     "(Brewfile|composer.lock|Gemfile|Gopkg.lock|Pipfile.lock)": [
       "task fix:prettier --"
@@ -182,7 +219,6 @@
       "task image:compress --"
     ]
   },
-  "name": "@mblabs/centos-desktop",
   "ntl": {
     "descriptions": {
       "build": "Builds the project using the build command specified under scripts in package.json",
@@ -201,7 +237,6 @@
       "vagrant": "Opens an interactive dialog that lets you choose between virtualization platforms to use with the \"vagrant up\" command"
     }
   },
-  "optionalDependencies": {},
   "pnpm": {
     "allowedVersions": {
       "@typescript-eslint/eslint-plugin": "5",
@@ -221,13 +256,6 @@
     }
   },
   "prettier": "prettier-config-sexy-mode",
-  "private": false,
-  "publishConfig": {
-    "@gitlab:registry": "https://gitlab.com/api/v4/projects//packages/npm/",
-    "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "tag": "edge"
-  },
   "release": {
     "branches": [
       "main",
@@ -239,33 +267,5 @@
       }
     ],
     "extends": "semantic-release-config"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/megabyte-labs/packer-centos-desktop.git"
-  },
-  "scripts": {
-    "build": "task packer:build",
-    "build:hyperv": "task packer:build:hyperv",
-    "build:kvm": "task packer:build:kvm",
-    "build:parallels": "task packer:build:parallels",
-    "build:virtualbox": "task packer:build:virtualbox",
-    "build:vmware": "task packer:build:vmware",
-    "commit": "bash start.sh && task commit",
-    "fix": "bash start.sh && task fix",
-    "help": "bash start.sh && task --menu",
-    "lint": "bash start.sh && task lint",
-    "preload": "bash start.sh && task preload",
-    "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
-    "release": "bash start.sh && task publish:semantic-release",
-    "repair": "bash <(curl -sS https://install.doctor/repair)",
-    "start": "test -z $SKIP_NPM_START && bash start.sh || true",
-    "test": "task lint:packer",
-    "unpack": "bash start.sh && task npm:bundle:unpack",
-    "update": "bash start.sh && task update",
-    "vagrant": "task vagrant:up",
-    "vscode": "bash start.sh && task vscode"
-  },
-  "type": "module",
-  "version": "1.0.0"
+  }
 }
