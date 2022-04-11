@@ -109,7 +109,10 @@
     "subgroup": "desktop",
     "title": "CentOS Stream Desktop Template for Packer",
     "vagrant_tag": "centos",
-    "version_description": "Compact CentOS Stream Desktop ISO_VERSION image. Built from the CentOS Stream Server image using many of the scripts that Bento Chef uses. See https://github.com/megabyte-labs/packer-centos-desktop for more details."
+    "version_description": "Compact CentOS Stream Desktop ISO_VERSION image. Built from the CentOS Stream Server image using many of the scripts that Bento Chef uses. See https://github.com/megabyte-labs/packer-centos-desktop for more details.",
+    "github_id": "R_kgDOHKGonA",
+    "gitlab_project_id": "24081426",
+    "gitlab_group_id": "10839950"
   },
   "changelog": {
     "displayTypes": [
