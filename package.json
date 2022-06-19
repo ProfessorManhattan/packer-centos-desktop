@@ -45,11 +45,13 @@
   "dependencies": {},
   "optionalDependencies": {},
   "devDependencies": {
+    "@commitlint/config-conventional": "latest",
     "@megabytelabs/prettier-config": "^1.2.893",
     "consola": "^2.15.3",
     "cspell": "^5.4.0",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
     "husky": "^5.2.0",
     "lint-staged": "^11.0.0",
     "markdown-link-check": "^3.8.7",
@@ -63,9 +65,7 @@
     "shellcheck": "^1.0.0",
     "standard-version": "^9.3.0",
     "trash-cli": "^4.0.0",
-    "typescript": "^4.5.5",
-    "@commitlint/config-conventional": "latest",
-    "handlebars-helpers": "latest"
+    "typescript": "^4.5.5"
   },
   "keywords": [
     "accelerated",
@@ -89,7 +89,7 @@
     "node": ">=14.18.0"
   },
   "publishConfig": {
-    "@gitlab:registry": "https://gitlab.com/api/v4/projects//packages/npm/",
+    "@gitlab:registry": "https://gitlab.com/api/v4/projects/24081426/packages/npm/",
     "access": "public",
     "registry": "https://registry.npmjs.org/",
     "tag": "edge"
@@ -97,6 +97,9 @@
   "blueprint": {
     "description": "An automated CentOS Stream Desktop Packer project (currently, version ISO_VERSION) that builds boxes using the latest CentOS Stream release",
     "description_template": "CentOS Stream Desktop ISO_VERSION",
+    "github_id": "R_kgDOHKGonA",
+    "gitlab_group_id": "10839950",
+    "gitlab_project_id": "24081426",
     "group": "packer",
     "hostname": "vagrant-centos",
     "name": "CentOS Stream Desktop",
@@ -109,10 +112,7 @@
     "subgroup": "desktop",
     "title": "CentOS Stream Desktop Template for Packer",
     "vagrant_tag": "centos",
-    "version_description": "Compact CentOS Stream Desktop ISO_VERSION image. Built from the CentOS Stream Server image using many of the scripts that Bento Chef uses. See https://github.com/megabyte-labs/packer-centos-desktop for more details.",
-    "github_id": "R_kgDOHKGonA",
-    "gitlab_project_id": "24081426",
-    "gitlab_group_id": "10839950"
+    "version_description": "Compact CentOS Stream Desktop ISO_VERSION image. Built from the CentOS Stream Server image using many of the scripts that Bento Chef uses. See https://github.com/megabyte-labs/packer-centos-desktop for more details."
   },
   "changelog": {
     "displayTypes": [
@@ -125,7 +125,9 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "eslintConfig": {
@@ -215,6 +217,9 @@
       "task fix:prettier --",
       "task lint:vagrant"
     ],
+    "logo.(gif|jpg|jpeg|webp)": [
+      "task image:convert:logo --"
+    ],
     "logo.png": [
       "task image:resize -- 200 200",
       "task image:compress --"
@@ -268,5 +273,9 @@
       }
     ],
     "extends": "semantic-release-config"
+  },
+  "volta": {
+    "node": "18.4.0",
+    "yarn": "2"
   }
 }
