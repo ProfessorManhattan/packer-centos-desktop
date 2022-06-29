@@ -145,7 +145,6 @@
         "scripts/networking.symlink.sh",
         "scripts/vagrant.symlink.sh",
         "scripts/virtualbox.symlink.sh",
-        "scripts/vmware.symlink.sh",
         "scripts/parallels.symlink.sh",
         "scripts/cleanup.symlink.sh",
         "scripts/minimize.symlink.sh",
@@ -161,7 +160,7 @@
     "build_directory": "build",
     "compression_level": "9",
     "cpus": "2",
-    "description": "CentOS Stream Desktop 8",
+    "description": "CentOS Stream Desktop 9",
     "disk_size": "80000",
     "guest_additions_url": "",
     "headless": "false",
@@ -170,9 +169,9 @@
     "https_proxy": "{{ env `HTTPS_PROXY` }}",
     "hyperv_generation": "1",
     "hyperv_switch": "bento",
-    "iso_checksum_url": "https://mirror.arizona.edu/centos/8-stream/isos/x86_64/CHECKSUM",
-    "iso_url": "https://mirror.arizona.edu/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20210608-dvd1.iso",
-    "iso_version": "8",
+    "iso_checksum_url": "https://linux.domainesia.com/centos-stream/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso.SHA256SUM",
+    "iso_url": "https://linux.domainesia.com/centos-stream/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso",
+    "iso_version": "9",
     "kickstarter_path": "kickstarter.cfg",
     "latestos_tag": "centos",
     "memory": "2048",
@@ -184,6 +183,6 @@
     "ssh_username": "vagrant",
     "vagrantup_token": "{{ env `VAGRANT_CLOUD_TOKEN` }}",
     "vagrantup_user": "Megabyte",
-    "version_description": "Compact CentOS Stream Desktop 8 image. Built from the CentOS Stream Server image using many of the scripts that Bento Chef uses. See https://github.com/megabyte-labs/packer-centos-desktop for more details."
+    "version_description": "Compact CentOS Stream Desktop 9 image. Built from the CentOS Stream Server image using many of the scripts that Bento Chef uses. See https://github.com/megabyte-labs/packer-centos-desktop for more details."
   }
 }

@@ -4,7 +4,7 @@
 Vagrant.require_version ">= 1.6.2"
 
 cpus = 2
-description = "CentOS Stream Desktop 8"
+description = "CentOS Stream Desktop 9"
 memory = 4096
 
 Vagrant.configure("2") do |config|
