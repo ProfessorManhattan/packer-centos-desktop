@@ -61,7 +61,7 @@
   </a>
 </div>
 
-> </br><h4 align="center">**An automated CentOS Stream Desktop Packer project (currently, version 8) that builds boxes using the latest CentOS Stream release**</h4></br>
+> </br><h4 align="center">**An automated CentOS Stream Desktop Packer project (currently, version 9) that builds boxes using the latest CentOS Stream release**</h4></br>
 
 <!--TERMINALIZER![terminalizer_title](https://gitlab.com/megabyte-labs/ansible-roles/role_name/-/raw/master/.demo.gif)TERMINALIZER-->
 
@@ -87,9 +87,9 @@ This project houses configurations that can be used to build performant **[CentO
 
 This project:
 
-- Currently builds a minimal CentOS Stream Desktop 8 VM image by default
+- Currently builds a minimal CentOS Stream Desktop 9 VM image by default
 - May contain multiple templates which will all end in `template.json` and be present in the root of the project
-- Automates the process of keeping our [CentOS Stream Desktop 8 VM images](https://app.vagrantup.com/Megabyte/boxes/CentOS-Desktop) up-to-date with the latest upstream source by (1) using the `vagrant-cloud` post-processor to automatically upload the box after it is built and (2) running the build with a cronjob
+- Automates the process of keeping our [CentOS Stream Desktop 9 VM images](https://app.vagrantup.com/Megabyte/boxes/CentOS-Desktop) up-to-date with the latest upstream source by (1) using the `vagrant-cloud` post-processor to automatically upload the box after it is built and (2) running the build with a cronjob
 - In some cases, [LatestOS](https://pypi.org/project/latestos/) is used to automatically update the link to the base image / checksums to the latest release
 
 ### Supported Virtualization Platforms
@@ -126,7 +126,7 @@ The default username and password are both _vagrant_.
 
 ## Creating Your Own Box
 
-You can quickly use this project to create your own minimal CentOS Stream Desktop 8 box by:
+You can quickly use this project to create your own minimal CentOS Stream Desktop 9 box by:
 
 1. Creating a box on VagrantUp titled CentOS-Desktop (Note: The VagrantUp box name should match the `"box_basename"` in the `template.json` file.)
 2. Changing the `"vagrantup_user"` variable in `template.json` to your VagrantUp username
@@ -151,7 +151,7 @@ If you do not want your box to be automatically uploaded to VagrantUp after you 
 
 ## Updating Your Box
 
-If a new release of the CentOS Stream Desktop 8 system is available, you can update your VagrantUp box. You can do this by changing the `"iso_checksum_url"`, `"iso_url"`, and `"iso_version"` variables in the `template.json` file. After that, run `packer build -only=virtualbox-iso template.json` to build the image again.
+If a new release of the CentOS Stream Desktop 9 system is available, you can update your VagrantUp box. You can do this by changing the `"iso_checksum_url"`, `"iso_url"`, and `"iso_version"` variables in the `template.json` file. After that, run `packer build -only=virtualbox-iso template.json` to build the image again.
 
 <a href="#contributing" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
