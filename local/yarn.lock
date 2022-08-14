@@ -1401,11 +1401,6 @@ prettier@^1.16.0:
   resolved "2.6.2"
   integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
 
-prettier@^2.1.1:
-  version "2.6.2"
-  resolved "2.6.2"
-  integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
-
 prettier@^2.4.1:
   version "2.6.2"
   resolved "2.6.2"
