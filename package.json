@@ -50,27 +50,27 @@
   },
   "optionalDependencies": {},
   "devDependencies": {
-    "@megabytelabs/prettier-config": "^1.2.893",
+    "@commitlint/config-conventional": "latest",
+    "@megabytelabs/prettier-config": "^1.14.1",
     "consola": "^2.15.3",
-    "cspell": "^5.4.0",
+    "cspell": "^5.21.2",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
     "husky": "^5.2.0",
-    "lint-staged": "^11.0.0",
-    "markdown-link-check": "^3.8.7",
+    "lint-staged": "^11.2.6",
+    "markdown-link-check": "^3.10.2",
     "npm-run-all": "^4.1.5",
     "npm-scripts-info": "^0.3.9",
     "prettier": "^2.4.1",
     "prettier-config-sexy-mode": "latest",
-    "prettier-package-json": "^2.5.0",
+    "prettier-package-json": "^2.6.4",
     "prettier-plugin-sh": "^0.6.1",
     "semantic-release-config": "latest",
-    "shellcheck": "^1.0.0",
-    "standard-version": "^9.3.0",
+    "shellcheck": "^1.1.0",
+    "standard-version": "^9.5.0",
     "trash-cli": "^4.0.0",
-    "typescript": "^4.5.5",
-    "@commitlint/config-conventional": "latest",
-    "handlebars-helpers": "latest"
+    "typescript": "^4.5.5"
   },
   "keywords": [
     "accelerated",
@@ -130,7 +130,9 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "eslintConfig": {
