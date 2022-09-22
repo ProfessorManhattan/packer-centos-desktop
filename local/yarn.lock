@@ -594,9 +594,9 @@ eslint-plugin-fp@^2.3.0:
     req-all "^0.1.0"
 
 eslint-plugin-functional@^4.2.2:
-  version "4.3.2"
-  resolved "4.3.2"
-  integrity sha512-GoR36d/P8/ZG984mGXMIrnCEBSoPC/WgBCh3zH7z7xsvIlvByO4fSexzsuo1ap3HVyKIY7L+gtRohscGBsZ5Fg==
+  version "4.4.0"
+  resolved "4.4.0"
+  integrity sha512-DY/Iax9knIgzvxhVeSe+KoF9e4imLvzCvUEN1a+bWciDiBi3s1CG/1fw7AQVXoAqoNw9eYuP7C2u3OtHzMFy+A==
   dependencies:
     "@typescript-eslint/utils" "^5.10.2"
     deepmerge-ts "^4.0.3"
@@ -1150,17 +1150,17 @@ lint-staged@^11.2.6:
     stringify-object "3.3.0"
     supports-color "8.1.1"
 
-markdown-link-check@^3.10.2:
-  version "3.10.2"
-  resolved "3.10.2"
-  integrity sha512-5yQEVtjLxAjxWy82+iTgxrekr1tuD4sKGgwXiyLrCep8RERFH3yCdpZdeA12em2S2SEwXGxp6qHI73jVhuScKA==
+markdown-link-check@^3.10.3:
+  version "3.10.3"
+  resolved "3.10.3"
+  integrity sha512-uGdJiZOy1CVWlRe7CyBSJ0Gz80Xm4vt++xjX9sNFjB7qcAxLinaMmzFQ5xOwERaXC9mK770BhnqnsyJT1gTr9w==
   dependencies:
-    async "^3.2.3"
+    async "^3.2.4"
     chalk "^4.1.2"
     commander "^6.2.0"
-    link-check "^5.1.0"
+    link-check "^5.2.0"
     lodash "^4.17.21"
-    markdown-link-extractor "^3.0.2"
+    markdown-link-extractor "^3.1.0"
     needle "^3.1.0"
     progress "^2.0.3"
 
