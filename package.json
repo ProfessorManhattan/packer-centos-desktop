@@ -50,13 +50,11 @@
   },
   "optionalDependencies": {},
   "devDependencies": {
-    "@commitlint/config-conventional": "latest",
     "@megabytelabs/prettier-config": "^1.14.1",
     "consola": "^2.15.3",
     "cspell": "^5.21.2",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
-    "handlebars-helpers": "latest",
     "husky": "^5.2.0",
     "lint-staged": "^11.2.6",
     "markdown-link-check": "^3.10.3",
@@ -70,7 +68,9 @@
     "shellcheck": "^1.1.0",
     "standard-version": "^9.5.0",
     "trash-cli": "^4.0.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "@commitlint/config-conventional": "latest",
+    "handlebars-helpers": "latest"
   },
   "keywords": [
     "accelerated",
@@ -130,9 +130,7 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
+    "extends": [],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "eslintConfig": {
